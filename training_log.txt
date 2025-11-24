@@ -1,0 +1,14 @@
+Training metadata generated at 2025-11-21 13:53:11
+Model file: lightfm_model.npz (18769250 bytes)
+NPZ keys and shapes:
+ - user_embeddings: [1479, 64]
+ - item_embeddings: [76419, 64]
+ - user_biases: [1479]
+ - item_biases: [76419]
+
+Mapping counts:
+ - user_ids: 1451
+ - item_ids: 40973
+
+Notes:
+Best-effort metadata. Hyperparameters not embedded in model; using tuned hyperparams from workflow.

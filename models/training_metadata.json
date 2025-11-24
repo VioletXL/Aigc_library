@@ -1,0 +1,69 @@
+{
+  "generated_at": "2025-11-21 13:53:11",
+  "model_file": "lightfm_model.npz",
+  "model_file_bytes": 18769250,
+  "npz_keys": {
+    "user_embeddings": [
+      1479,
+      64
+    ],
+    "item_embeddings": [
+      76419,
+      64
+    ],
+    "user_biases": [
+      1479
+    ],
+    "item_biases": [
+      76419
+    ]
+  },
+  "mappings_file": "lightfm_model_mappings.json",
+  "mapping_counts": {
+    "user_ids": 1451,
+    "item_ids": 40973
+  },
+  "mapping_samples": {
+    "user_ids": {
+      "first5": [
+        "1",
+        "10",
+        "100",
+        "1000",
+        "1001"
+      ],
+      "last5": [
+        "995",
+        "996",
+        "997",
+        "998",
+        "999"
+      ]
+    },
+    "item_ids": {
+      "first5": [
+        "6526",
+        "28303",
+        "28304",
+        "33165",
+        "36293"
+      ],
+      "last5": [
+        "53952",
+        "55986",
+        "22828",
+        "26049",
+        "35965"
+      ]
+    }
+  },
+  "notes": "Best-effort metadata. Hyperparameters not embedded in model; using tuned hyperparams from workflow.",
+  "hyperparameters": {
+    "lightfm_components": 64,
+    "loss": "warp",
+    "lightfm_weight": 0.45,
+    "attention_temperature": 0.05,
+    "dept_collaborative_boost": 0.3,
+    "dept_affinity_boost": 0.25
+  }
+}

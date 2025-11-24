@@ -1,0 +1,101 @@
+图书推荐系统 - 环境配置说明
+================================
+
+运行环境: Python 3.10+ (推荐使用conda环境)
+Python版本: 3.10 或 3.11
+
+一、快速运行（推荐）
+------------------
+bash run.sh
+
+脚本会自动：
+1. 激活conda环境
+2. 检查依赖
+3. 训练模型
+4. 生成推荐
+
+
+二、手动运行步骤
+--------------
+1. 激活环境（替换为您的环境名）
+   conda activate <your_env_name>
+
+2. 训练LightFM模型
+   python code/lightfm_pipeline.py
+   
+3. 生成推荐结果
+   python code/juesai.py
+
+4. 查看结果
+   head output/submission_人民当家作组.csv
+
+
+三、环境依赖
+----------
+核心依赖包（已导出至requirements.txt）：
+- pandas >= 2.0.0
+- numpy >= 1.24.0
+- scikit-learn >= 1.2.0
+- lightfm >= 1.17
+- matplotlib >= 3.7.0
+
+安装命令：
+conda activate <your_env_name>
+pip install -r requirements.txt
+
+或手动安装：
+pip install pandas numpy scikit-learn lightfm matplotlib
+
+
+四、数据文件要求
+--------------
+确保以下文件存在：
+- data/item.csv                    (图书元数据)
+- data/user.csv                    (用户信息)
+- data/inter_final_选手可见.csv     (测试数据)
+- data/inter_reevaluation.csv      (训练数据，可选)
+
+
+五、预期输出
+----------
+- models/lightfm_model.npz            (LightFM模型参数)
+- models/lightfm_model_mappings.json  (ID映射)
+- output/submission_人民当家作组.csv   (推荐结果，1451行)
+
+
+六、性能指标
+----------
+- 训练时间: 3-5分钟
+- 推荐时间: 1-2分钟
+- 内存占用: <2GB
+- 推荐用户: 1,451个
+- 唯一书籍: 235本
+- 覆盖率: 16.20%
+
+
+七、故障排查
+----------
+1. 环境未激活
+   错误: ModuleNotFoundError
+   解决: conda activate <your_env_name>
+
+2. 数据文件缺失
+   错误: FileNotFoundError
+   解决: 检查data/文件夹，确保包含：
+        - item.csv
+        - user.csv
+        - inter_final_选手可见.csv
+        - inter_reevaluation.csv
+
+3. 模型加载失败
+   错误: lightfm_model.npz not found
+   解决: 先运行 python code/lightfm_pipeline.py
+
+
+八、详细文档
+----------
+- docs/技术报告.md  : 完整技术文档（含算法详解）
+- docs/README.md    : 快速开始指南
+
+
+
