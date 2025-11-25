@@ -16,3 +16,6 @@ Creating a new branch is quick.
 Creating a new branch is quick and simple.
 
 分支管理策略
+
+这是正在修复的bug
+这是一个bug
